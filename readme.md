@@ -3,6 +3,17 @@
 This repository contains the end-to-end machine learning pipeline developed for the **Comment Category Prediction Challenge** on Kaggle. The project focuses on multiclass text classification across 4 classes using a combination of comment text, engagement statistics, and user metadata.
 
 ---
+## Problem Statement
+
+Online discussion platforms face a persistent challenge in automatically moderating and categorizing high volumes of user-generated content. The primary objective of this competition is to classify online comments into **four distinct categories** (`0`, `1`, `2`, and `3`), ranging from non-toxic comments to various tiers of toxic and harmful behavior.
+
+Key technical challenges inherent to this problem include:
+* **Severe Class Imbalance:** Minority toxic classes represent a very small fraction of total entries, which naturally causes naive algorithms to favor dominant majority classes.
+* **Multimodal Feature Representation:** Relevant predictive signals span unstructured text content alongside high-variance tabular metrics (upvotes, downvotes, interaction flags) and heavily missing user demographic attributes.
+* **High-Dimensional Sparsity:** Extracting contextual n-grams introduces extreme feature sparsity and risk of overfitting on single-occurrence noise or typos.
+* **Leakage-Free Inference & Exact Schema Conformance:** Preprocessing must remain strictly isolated between training and evaluation splits while reliably mapping non-unique raw identifiers to the required submission schema across 102,000 test records.
+
+---
 
 ## 1. Project Overview & Architecture
 
